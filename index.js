@@ -58,10 +58,31 @@ function reversePassword(password){
     for (let i=0; i<password.length; i++){
         array1 = array1.concat(password[password.length-1-i]);
     }
-    console.log(array1)
     return array1;
 }
 
+
+//console.log(reversePassword("Hello1234"));
+
+function storePassword(name, password1, password2){
+    var newpass = password1;
+    
+    //ifelse statement will change if the two passwords match
+    if (validatePassword(password1,password2)){
+        newpass = reversePassword(password1);
+    }
+
+    var username = {
+        name: name,
+        newpassword: newpass,
+    }
+
+    return username;
+
+}
+
+//test 
+console.log(storePassword("John", "Pass1234", "Pass1234"));
+console.log(storePassword("John", "Pass123", "Pass12345"));
 //https://www.w3schools.com/jsref/jsref_concat_string.asp <= used concatenate function
-//https://www.w3schools.com/jsref/jsref_charcodeat.asp <= used charcodeat function
-console.log(reversePassword("Hello1234"));
+//https://www.w3schools.com/jsref/jsref_charcodeat.asp <= used charcodeat function to convert string to ascii value
