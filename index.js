@@ -1,8 +1,3 @@
-/*A function for validating if 2 passwords match.
-The function should accept 2 string parameters. Imagine that these represent the input from a
-signup form’s password fields.
-*/
-
 //this function will validate if 2 passwords match
 function validatePassword(password1, password2){
 
@@ -42,16 +37,10 @@ function validatePassword(password1, password2){
         return false;
     }
 } 
-/*
-console.log(validatePassword("helloworld","hello"));
-console.log(validatePassword("hello","hello"));
-console.log(validatePassword("hello1234","hello1234"));
-console.log(validatePassword("Hello1234","Hello1234"));
-console.log(validatePassword("HELLO1234","HELLO1234"));
-*/
 
 //This function will reverse the password string
 function reversePassword(password){
+    //instatiate new String to store the reversed password
     var array1 = new String;
 
     //this loop will insert each character starting from the end instead of the beginning of the string
@@ -61,9 +50,6 @@ function reversePassword(password){
     return array1;
 }
 
-
-//console.log(reversePassword("Hello1234"));
-
 function storePassword(name, password1, password2){
     var newpass = password1;
     
@@ -72,6 +58,7 @@ function storePassword(name, password1, password2){
         newpass = reversePassword(password1);
     }
 
+    //instantiate object
     var username = {
         name: name,
         newpassword: newpass,
